@@ -38,6 +38,7 @@ android {
         warningsAsErrors = true
         abortOnError = true
         disable.add("GradleDependency")
+        disable.add("AndroidGradlePluginVersion")
     }
 }
 
