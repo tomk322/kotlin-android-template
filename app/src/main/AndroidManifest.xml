@@ -2,39 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!--
-      No runtime permissions are requested. Everything Rootscope reports comes from
-      public Build fields, world-readable /proc + /sys nodes, sticky broadcasts, or
-      commands executed through the user's own su daemon.
-
-      The <queries> block is required on API 30+ so the root-manager probe can see
-      known superuser apps without holding QUERY_ALL_PACKAGES.
-    -->
-    <queries>
-        <package android:name="com.topjohnwu.magisk" />
-        <package android:name="io.github.huskydg.magisk" />
-        <package android:name="me.weishu.kernelsu" />
-        <package android:name="com.rifsxd.ksunext" />
-        <package android:name="me.bmax.apatch" />
-        <package android:name="eu.chainfire.supersu" />
-        <package android:name="com.koushikdutta.superuser" />
-        <package android:name="com.noshufou.android.su" />
-        <package android:name="com.thirdparty.superuser" />
-        <package android:name="com.yellowes.su" />
-        <package android:name="com.kingroot.kinguser" />
-        <package android:name="com.kingo.root" />
-        <package android:name="com.zhiqupk.root.global" />
-        <package android:name="com.alephzain.framaroot" />
-        <package android:name="me.weishu.exp" />
-        <package android:name="org.lsposed.manager" />
-        <package android:name="io.github.lsposed.manager" />
-        <package android:name="com.android.vending" />
-        <package android:name="com.google.android.gms" />
-        <package android:name="org.lineageos.settings.device" />
-    </queries>
-
     <application
-        android:allowBackup="false"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"

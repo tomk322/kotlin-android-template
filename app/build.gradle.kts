@@ -57,6 +57,8 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 dependencies {
+    implementation(projects.engine)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.coroutines.android)
 

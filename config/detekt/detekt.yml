@@ -218,6 +218,8 @@ complexity:
     active: true
     excludes:
       [
+        # Story content declares one function per scene on purpose; see engine/content.
+        "**/engine/content/**",
         "**/test/**",
         "**/androidTest/**",
         "**/commonTest/**",
