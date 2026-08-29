@@ -86,11 +86,15 @@ fun TitleScreen(
     }
 }
 
+/**
+ * Full-screen prose: waking at eleven, a discovery beat, an ending.
+ *
+ * The world handles rooms; anything that is a moment rather than a place comes through here.
+ */
 @Composable
-fun SceneScreen(
+fun StoryCard(
     view: SceneView,
     onChoice: (String) -> Unit,
-    onJournal: () -> Unit,
 ) {
     var skip by remember(view.text) { mutableStateOf(false) }
     var typed by remember(view.text) { mutableStateOf(false) }
@@ -104,7 +108,12 @@ fun SceneScreen(
 
         Column(modifier = Modifier.fillMaxSize()) {
             if (!view.isEnding) {
-                Hud(view.state, onJournal)
+                Text(
+                    text = "${view.state.clock}  ·  ${view.state.minutesLeft} min left",
+                    style = Instrument,
+                    color = FoamDim,
+                    modifier = Modifier.padding(start = 22.dp, top = 14.dp),
+                )
             }
 
             Column(
